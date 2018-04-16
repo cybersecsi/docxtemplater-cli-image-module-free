@@ -1,16 +1,16 @@
 {
-  "name": "docxtemplater-cli",
-  "version": "3.5.2",
-  "description": "",
-  "main": "index.js",
+  "name": "docxtemplater-cli-open-image-module",
+  "version": "1.0.0",
+  "description": "CLI for Docxtemplater including optional support of OpenSource ImageModule",
+  "main": "js/cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "rimraf js && mkdirp js && babel es6 --out-dir js"
   },
   "bin": {
-    "docxtemplater": "./cli.js"
+    "docxtemplater": "js/cli.js"
   },
   "keywords": [],
-  "author": "Edgar Hipp",
+  "author": "MaxRcd (Edgar Hipp)",
   "license": "MIT",
   "dependencies": {
     "bluerider": "^1.0.0",
@@ -18,5 +18,12 @@
     "jszip": "^2.6.1",
     "minimist": "^1.2.0",
     "image-size": "^0.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.3.13",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.4"
   }
 }

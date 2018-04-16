@@ -37,9 +37,43 @@ const output = args[2];
 const zip = new JSZip(input);
 const doc = new Docxtemplater();
 
+if (data && data.config && data.config.modules && data.config.modules.indexOf("docxtemplater-image-module") !== -1) {
+    const ImageModule = require("docxtemplater-image-module");
+	const sizeOf = require("image-size");
+    const fileType = args[0].indexOf(".pptx") !== -1 ? "pptx" : "docx";
+    const imageDir = path.resolve(process.cwd(), data.config.imageDir || "") + path.sep;
+    const opts = {};
+    opts.centered = false;
+    opts.fileType = fileType;
+
+    opts.getImage = (tagValue) => {
+        const filePath = path.resolve(imageDir, tagValue);
+
+        if (filePath.indexOf(imageDir) !== 0) {
+            throw new Error("Images must be stored under folder: " + imageDir);
+        }
+
+        return fs.readFileSync(filePath, "binary");
+    };
+
+    opts.getSize = (img, tagValue) => {
+        const filePath = path.resolve(imageDir, tagValue);
+
+        if (filePath.indexOf(imageDir) !== 0) {
+            throw new Error("Images must be stored under folder: " + imageDir);
+        }
+
+        const dimensions = sizeOf(filePath);
+        return [dimensions.width, dimensions.height];
+    };
+
+    const imageModule = new ImageModule(opts);
+    doc.attachModule(imageModule);
+}
+
 doc.loadZip(zip)
 	.setOptions({parser})
-	.setData(data)
+	.setData(data);
 
 function transformError(error) {
 	const e = {

@@ -1,6 +1,6 @@
 {
   "name": "docxtemplater-cli-open-image-module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI for Docxtemplater including optional support of OpenSource ImageModule",
   "main": "js/cli.js",
   "scripts": {
@@ -15,6 +15,7 @@
   "dependencies": {
     "bluerider": "^1.0.0",
     "docxtemplater": "^3.5.2",
+    "open-docxtemplater-image-module": "^1.0.2",
     "jszip": "^2.6.1",
     "minimist": "^1.2.0",
     "image-size": "^0.5.1"

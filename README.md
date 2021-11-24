@@ -1,12 +1,12 @@
-docxtemplater CLI (with Open Source Image Module)
+docxtemplater CLI (with Image Module Free)
 ==========================================
-This fork of docxtemplater CLI includes the support for [open-docxtemplater-image-module](https://github.com/MaxRcd/open-docxtemplater-image-module).
+This fork of docxtemplater CLI includes the support for [docxtemplater-image-module-free](https://github.com/evilc0des/docxtemplater-image-module-free). This module is different from the module [open-docxtemplater-image-module](https://github.com/MaxRcd/open-docxtemplater-image-module), which does not work now.
 
 Installation
 ------------
-The package below includes a copy of docxtemplater and open-docxtemplater-image-module.
+The package below includes a copy of docxtemplater and docxtemplater-image-module-free.
 ```
-npm install -g docxtemplater-cli-open-image-module
+npm install -g docxtemplater-cli-image-module-free
 ```
 
 Try it out
@@ -29,7 +29,7 @@ This is a simple JSON file. Assuming we are working on the template 'input.pptx'
 }
 ```
 
-As you can see we have included a picture of John Doe (johndoe.png). For this picture to be correctly rendered in the output, we must explicitly activate the Open Source Image Module [open-docxtemplater-image-module](https://github.com/MaxRcd/open-docxtemplater-image-module). Note that all images must be under the directory 'imageDir'.
+As you can see we have included a picture of John Doe (johndoe.png). For this picture to be correctly rendered in the output, we must explicitly activate the Image Module Free [docxtemplater-image-module-free](https://github.com/evilc0des/docxtemplater-image-module-free). Note that all images must be under the directory 'imageDir'.
 ```json
 {
     "first_name": "John",
@@ -38,7 +38,7 @@ As you can see we have included a picture of John Doe (johndoe.png). For this pi
     "phone": "+4412345678",
     "picture": "johndoe.png",
     "config": {
-      "modules": ["open-docxtemplater-image-module"],
+      "modules": ["docxtemplater-image-module-free"],
       "imageDir": "."
     }
 }

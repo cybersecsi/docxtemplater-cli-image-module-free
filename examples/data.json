@@ -5,7 +5,7 @@
     "phone": "+4412345678",
     "picture": "johndoe.png",
     "config": {
-        "modules": ["open-docxtemplater-image-module"],
+        "modules": ["docxtemplater-image-module-free"],
         "imageDir": "."
     }
 }

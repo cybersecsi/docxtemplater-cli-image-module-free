@@ -37,8 +37,8 @@ const output = args[2];
 const zip = new JSZip(input);
 const doc = new Docxtemplater();
 
-if (data && data.config && data.config.modules && data.config.modules.indexOf("open-docxtemplater-image-module") !== -1) {
-    const ImageModule = require("open-docxtemplater-image-module");
+if (data && data.config && data.config.modules && data.config.modules.indexOf("docxtemplater-image-module-free") !== -1) {
+    const ImageModule = require("docxtemplater-image-module-free");
 	const sizeOf = require("image-size");
     const fileType = args[0].indexOf(".pptx") !== -1 ? "pptx" : "docx";
     const imageDir = path.resolve(process.cwd(), data.config.imageDir || "") + path.sep;
@@ -64,6 +64,11 @@ if (data && data.config && data.config.modules && data.config.modules.indexOf("o
         }
 
         const dimensions = sizeOf(filePath);
+		if (dimensions.width > 600) {
+			const divider = dimensions.width / 600;
+			dimensions.width = 600;
+			dimensions.height = Math.floor(dimensions.height / divider);
+		}
         return [dimensions.width, dimensions.height];
     };
 

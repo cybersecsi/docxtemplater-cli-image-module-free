@@ -1,5 +1,5 @@
 {
-  "name": "docxtemplater-image-module-free",
+  "name": "docxtemplater-cli-image-module-free",
   "version": "1.0.0",
   "description": "CLI for Docxtemplater including optional support of Image Module Free",
   "main": "js/cli.js",

@@ -1,6 +1,7 @@
 docxtemplater CLI (with Image Module Free)
 ==========================================
 This fork of docxtemplater CLI includes the support for [docxtemplater-image-module-free](https://github.com/evilc0des/docxtemplater-image-module-free). This module is different from the module [open-docxtemplater-image-module](https://github.com/MaxRcd/open-docxtemplater-image-module), which does not work now.
+Moreover, this cli also includes the support for the rendering of some basic html code. This code is taken from [pwndoc](https://github.com/pwndoc/pwndoc) and the syntax to use it is the same used by pwndoc itself and is documented [here](https://pwndoc.github.io/pwndoc/#/docxtemplate?id=html-values-from-text-editors).
 
 Installation
 ------------

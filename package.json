@@ -14,11 +14,15 @@
   "license": "MIT",
   "dependencies": {
     "bluerider": "^1.0.0",
+    "docx": "^5.2.0",
     "docxtemplater": "^3.5.2",
     "docxtemplater-image-module-free": "^1.0.0",
+    "htmlparser2": "^7.2.0",
+    "image-size": "^0.5.1",
     "jszip": "^2.6.1",
+    "lodash": "^4.17.21",
     "minimist": "^1.2.0",
-    "image-size": "^0.5.1"
+    "xml": "^1.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",

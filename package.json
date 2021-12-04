@@ -17,6 +17,7 @@
     "docx": "^5.2.0",
     "docxtemplater": "^3.5.2",
     "docxtemplater-image-module-free": "^1.0.0",
+    "flat": "^5.0.2",
     "htmlparser2": "^7.2.0",
     "image-size": "^0.5.1",
     "jszip": "^2.6.1",

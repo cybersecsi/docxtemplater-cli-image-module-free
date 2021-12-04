@@ -10,9 +10,11 @@ var Docxtemplater = require("docxtemplater");
 var path = require("path");
 var expressions = require("bluerider");
 var _ = require('lodash');
-var docx = require("docx")
-var xml = require("xml")
-var htmlparser = require("htmlparser2")
+var docx = require("docx");
+var xml = require("xml");
+var htmlparser = require("htmlparser2");
+var flatten = require("flat");
+var unflatten = require('flat').unflatten
 
 function showHelp() {
 	console.log("Usage: docxtemplater input.docx data.json output.docx");
@@ -259,8 +261,16 @@ if (data && data.config && data.config.modules && data.config.modules.indexOf("d
 	doc.attachModule(imageModule);
 }
 
-// replace html data with paragraphs and images
-data.poc = splitHTMLParagraphs(data.poc);
+// replace html data with paragraphs and images (the fields to be replaced must end with "_html")
+var flattened_data = flatten(data)
+var keys = Object.keys(flattened_data)
+for (let key of keys){
+    if (key.endsWith("_html")){
+        flattened_data[key] = splitHTMLParagraphs(flattened_data[key]);
+    }
+}
+data = unflatten(flattened_data)
+
 doc.loadZip(zip).setOptions({ parser: parser }).setData(data);
 
 function transformError(error) {

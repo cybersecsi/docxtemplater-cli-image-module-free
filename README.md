@@ -45,6 +45,21 @@ As you can see we have included a picture of John Doe (johndoe.png). For this pi
 }
 ```
 
+If you want to render an html field on the document, that field must end with "_html". In this example the field "description" becomes "description_html" and it is the name that must have in the template document as well.
+```json
+{
+    "first_name": "John",
+    "last_name": "Doe",
+    "description_html": "<p>He is awesome</p>",
+    "phone": "+4412345678",
+    "picture": "johndoe.png",
+    "config": {
+      "modules": ["docxtemplater-image-module-free"],
+      "imageDir": "."
+    }
+}
+```
+
 Template tags
 -------------
 More on how to write your templates in [docxtemplater documentation](http://docxtemplater.readthedocs.io/en/latest/tag_types.html).

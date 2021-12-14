@@ -26,6 +26,13 @@ if (argv.help) {
 }
 
 function parser(tag) {
+    if (tag === ".") {
+        return {
+            get: function get(scope) {
+                return scope;
+            }
+        };
+    }
 	var expr = expressions.compile(tag.replace(/’/g, "'"));
 	return {
 		get: function get(scope) {

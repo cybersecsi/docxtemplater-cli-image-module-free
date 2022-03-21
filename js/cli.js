@@ -278,7 +278,7 @@ for (let key of keys){
 }
 data = unflatten(flattened_data)
 
-doc.loadZip(zip).setOptions({ parser: parser }).setData(data);
+doc.loadZip(zip).setOptions({ parser: parser, paragraphLoop: true, linebreaks: true }).setData(data);
 
 function transformError(error) {
 	var e = {

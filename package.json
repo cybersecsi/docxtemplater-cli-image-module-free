@@ -22,7 +22,7 @@
     "image-size": "^0.5.1",
     "jszip": "^2.6.1",
     "lodash": "^4.17.21",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.7",
     "xml": "^1.0.1"
   },
   "devDependencies": {

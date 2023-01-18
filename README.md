@@ -5,9 +5,20 @@ Moreover, this cli also includes the support for the rendering of some basic htm
 
 Installation
 ------------
-The package below includes a copy of docxtemplater and docxtemplater-image-module-free.
+The package below includes a copy of docxtemplater and docxtemplater-image-module-free.    
+If you want to install with npm: 
 ```
 npm install -g https://github.com/cybersecsi/docxtemplater-cli-image-module-free.git
+```  
+
+To remove it: 
+```  
+npm uninstall -g docxtemplater-cli-image-module-free
+```     
+
+You can also use the binary: 
+```  
+
 ```
 
 Try it out
@@ -62,4 +73,13 @@ If you want to render an html field on the document, that field must end with "_
 
 Template tags
 -------------
-More on how to write your templates in [docxtemplater documentation](http://docxtemplater.readthedocs.io/en/latest/tag_types.html).
+More on how to write your templates in [docxtemplater documentation](http://docxtemplater.readthedocs.io/en/latest/tag_types.html).   
+
+
+## Release guide   
+To create a new release:   
+1. Login and install [gh](https://cli.github.com/)   
+2. Install `pkg` (`npm install -g pkg`)
+3. Update the version of the package with `npm`   
+4. Run `make release` to build the packages and upload a new release. 
+

@@ -7,7 +7,7 @@ Installation
 ------------
 The package below includes a copy of docxtemplater and docxtemplater-image-module-free.
 ```
-npm install -g docxtemplater-cli-image-module-free
+npm install -g https://github.com/cybersecsi/docxtemplater-cli-image-module-free.git
 ```
 
 Try it out
